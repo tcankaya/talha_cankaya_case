@@ -1,0 +1,20 @@
+03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - RUNNING TEST <---
+03:31:35 [INFO] pages.HomePage - Home Page Title: #1 Leader in Individualized, Cross-Channel CX — Insider
+03:31:35 [INFO] pages.HomePage - Expected Home Page Title: Insider
+03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - Home Page Title Contains 'Insider': true
+03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - PASS
+
+03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - RUNNING TEST <---
+03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - Hero Section on Home Page Visible: true
+03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - PASS
+
+03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - RUNNING TEST <---
+03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - Home Page Logo Visible: true
+03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - PASS
+
+03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - RUNNING TEST <---
+03:31:35 [INFO] pages.HomePage - Home Page URL: https://useinsider.com/
+03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - Home Page URL Matches Base URL: true
+03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - PASS
+
+03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - Browser closed.
