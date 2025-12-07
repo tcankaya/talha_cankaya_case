@@ -1,42 +1,87 @@
-03:45:30 [INFO] CareersPageTest.shouldOpenCareersPage - RUNNING TEST <---
-03:45:30 [INFO] pages.CareersPage - Hovered and clickable: Company Menu
-03:45:35 [INFO] pages.CareersPage - Clicked on element: Company > Careers
-03:45:35 [INFO] CareersPageTest.shouldOpenCareersPage - PASS
+12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - RUNNING TEST <---
+12:57:36 [INFO] pages.HomePage - Home Page URL: https://useinsider.com/
+12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - Home Page URL Matches Base URL: true
+12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - PASS
 
-03:45:36 [INFO] CareersPageTest.isCareersPageOpened - RUNNING TEST <---
-03:45:36 [INFO] CareersPageTest.isCareersPageOpened - Careers Page Head Visible: true
-03:45:36 [INFO] CareersPageTest.isCareersPageOpened - PASS
+12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - RUNNING TEST <---
+12:57:37 [INFO] pages.HomePage - Home Page Title: #1 Leader in Individualized, Cross-Channel CX — Insider
+12:57:37 [INFO] pages.HomePage - Expected Home Page Title: Insider
+12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - Home Page Title Contains 'Insider': true
+12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - PASS
 
-03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - RUNNING TEST <---
-03:45:36 [INFO] pages.CareersPage - Scrolled and visible: Teams Section
-03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Teams Section Visible: true
-03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Visible: true
-03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Count: 3
-03:45:37 [INFO] pages.CareersPage - Scrolled and visible: See All Teams Button
-03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - See All Teams Button Visible: true
-03:45:37 [INFO] pages.CareersPage - Clicked on element: See All Teams Button
-03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - All Teams Count After Click: 15
-03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - PASS
+12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - RUNNING TEST <---
+12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - Home Page Logo Visible: true
+12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - PASS
 
-03:45:37 [INFO] CareersPageTest.shouldValidateLocations - RUNNING TEST <---
-03:45:37 [INFO] CareersPageTest.shouldValidateLocations - Locations count: 25
-03:45:37 [INFO] CareersPageTest.shouldValidateLocations - Active city before: New York
-03:45:38 [INFO] pages.CareersPage - Scrolled and visible: Next Arrow Button
-03:45:38 [INFO] pages.CareersPage - Clicked on element: Next Arrow Button
-03:45:39 [INFO] CareersPageTest.shouldValidateLocations - Active city after: Sao Paulo
-03:45:39 [INFO] CareersPageTest.shouldValidateLocations - PASS
+12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - RUNNING TEST <---
+12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - Hero Section on Home Page Visible: true
+12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - PASS
 
-03:45:39 [INFO] CareersPageTest.shouldValidateLifeAtInsider - RUNNING TEST <---
-03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Section
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider section visible: true
-03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Title
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider title visible: true
-03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Description
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider description visible: true
-03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper Size
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider slides count: 13
-03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider active slide exists: true
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - PASS
+12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - Browser closed.
+12:58:14 [INFO] CareersPageTest.shouldOpenCareersPage - RUNNING TEST <---
+12:58:15 [INFO] pages.CareersPage - Hovered and clickable: Company Menu
+12:58:19 [INFO] pages.CareersPage - Clicked on element: Company > Careers
+12:58:19 [INFO] CareersPageTest.shouldOpenCareersPage - PASS
 
-03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Browser closed.
+12:58:34 [INFO] CareersPageTest.isCareersPageOpened - RUNNING TEST <---
+12:58:34 [INFO] CareersPageTest.isCareersPageOpened - Careers Page Head Visible: true
+12:58:34 [INFO] CareersPageTest.isCareersPageOpened - PASS
+
+12:58:49 [INFO] CareersPageTest.shouldDisplayTeams - RUNNING TEST <---
+12:58:50 [INFO] pages.CareersPage - Scrolled and visible: Teams Section
+12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Teams Section Visible: true
+12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Visible: true
+12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Count: 3
+12:58:50 [INFO] pages.CareersPage - Scrolled and visible: See All Teams Button
+12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - See All Teams Button Visible: true
+12:58:50 [INFO] pages.CareersPage - Clicked on element: See All Teams Button
+12:58:51 [INFO] CareersPageTest.shouldDisplayTeams - All Teams Count After Click: 15
+12:58:51 [INFO] CareersPageTest.shouldDisplayTeams - PASS
+
+12:59:06 [INFO] CareersPageTest.shouldValidateLocations - RUNNING TEST <---
+12:59:06 [INFO] CareersPageTest.shouldValidateLocations - Locations count: 25
+12:59:06 [INFO] CareersPageTest.shouldValidateLocations - Active city before: New York
+12:59:07 [INFO] pages.CareersPage - Scrolled and visible: Next Arrow Button
+12:59:07 [INFO] pages.CareersPage - Clicked on element: Next Arrow Button
+12:59:08 [INFO] CareersPageTest.shouldValidateLocations - Active city after: Sao Paulo
+12:59:08 [INFO] CareersPageTest.shouldValidateLocations - PASS
+
+12:59:23 [INFO] CareersPageTest.shouldValidateLifeAtInsider - RUNNING TEST <---
+12:59:23 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Section
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider section visible: true
+12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Title
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider title visible: true
+12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Description
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider description visible: true
+12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper Size
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider slides count: 13
+12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider active slide exists: true
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - PASS
+
+12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Browser closed.
+12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - RUNNING TEST <---
+12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Opening QA Page: https://useinsider.com/careers/quality-assurance/
+12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - QA page head is visible.
+12:59:27 [INFO] pages.QualityAssurancePage - Scrolled and visible: See All QA Jobs Button
+12:59:31 [INFO] pages.QualityAssurancePage - Clicked on element: See All QA Jobs Button
+12:59:31 [INFO] QualityAssurancePageTest.shouldValidateQaPage - 'See all QA jobs' clicked.
+12:59:31 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtering by department: Quality Assurance
+12:59:31 [INFO] pages.QualityAssurancePage - Scrolled and visible: Browse Text
+12:59:33 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter
+12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Browse Text
+12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter
+12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter Option: Quality Assurance
+12:59:49 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtering by location: Istanbul, Turkiye
+12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Location Filter
+12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Location Filter Option: Istanbul, Turkiye
+12:59:49 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Waiting filtered job list to stabilize for: Quality Assurance / Istanbul, Turkiye
+12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Validating filtered job list for: Quality Assurance / Istanbul, Turkiye
+12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtered job list validated successfully.
+12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Expected View Role href: https://jobs.lever.co/useinsider/774658ce-0d6e-4b07-a69b-4629fa11d6f3
+12:59:51 [INFO] pages.QualityAssurancePage - Scrolled and visible: View Role Button
+12:59:51 [INFO] pages.QualityAssurancePage - Clicked on element: View Role Button
+12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Opened View Role URL: https://jobs.lever.co/useinsider/774658ce-0d6e-4b07-a69b-4629fa11d6f3
+12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - PASS
+
+12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Browser closed.

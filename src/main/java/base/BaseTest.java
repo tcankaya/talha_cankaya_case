@@ -20,11 +20,14 @@ public abstract class BaseTest {
     @BeforeClass(alwaysRun = true)
     public void setUpClass() {
         String browser = ConfigReader.getProperty("browser");
-        String baseUrl = ConfigReader.getProperty("baseUrl");
 
         driver = DriverFactory.initializeDriver(browser);
         driver.manage().window().maximize();
-        driver.get(baseUrl);
+        driver.get(startURL());
+    }
+
+    protected String startURL() {
+        return ConfigReader.getProperty("baseUrl");
     }
 
     @BeforeMethod(alwaysRun = true)

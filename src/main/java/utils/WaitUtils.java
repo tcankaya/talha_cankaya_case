@@ -1,10 +1,8 @@
 package utils;
 
 import config.ConfigReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,6 +25,11 @@ public class WaitUtils {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void waitForVisibility(WebDriver driver, By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(getDefaultWait()));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
     // Method Overload - Clickability
     public static WebElement waitForClickability(WebDriver driver, WebElement element) {
         return waitForClickability(driver, element, getDefaultWait());
@@ -40,6 +43,13 @@ public class WaitUtils {
     public static List<WebElement> waitForAllVisible(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(getDefaultWait()));
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
+
+    public static void waitForAnyVisible(WebDriver driver, By locator) {
+        int waitSec = Integer.parseInt(ConfigReader.getProperty("pageLoadWait"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitSec));
+
+        wait.until(d -> d.findElements(locator).stream().anyMatch(WebElement::isDisplayed));
     }
 
     public static void waitForCountMoreThan(WebDriver driver, By locator, int oldCount) {
@@ -56,5 +66,9 @@ public class WaitUtils {
                         "r.left < (window.innerWidth || document.documentElement.clientWidth));",
                 element
         ));
+    }
+
+    protected void pressEscape(WebDriver driver) {
+        new Actions(driver).sendKeys(Keys.ESCAPE).perform();
     }
 }

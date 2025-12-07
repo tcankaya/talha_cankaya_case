@@ -1,5 +1,7 @@
 package utils;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,10 +24,13 @@ public class ElementUtils {
     private WebElement acceptAllCookiesBtn;
 
     public void acceptCookiesIfVisible() {
-        if (acceptAllCookiesBtn.isDisplayed())
+        try
         {
+            waitForVisibility(driver,acceptAllCookiesBtn);
             acceptAllCookiesBtn.click();
         }
+        catch (TimeoutException | NoSuchElementException ignored) {}
+
     }
 
     public static void moveToElement(WebDriver driver, WebElement element, int timeoutSeconds) {
