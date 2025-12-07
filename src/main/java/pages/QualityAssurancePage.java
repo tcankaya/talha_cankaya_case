@@ -28,7 +28,7 @@ public class QualityAssurancePage extends BasePage
     @FindBy(id="page-head")
     private WebElement qaPageHead;
 
-    @FindBy(linkText = "See all QA jobs")
+    @FindBy(css = "a[href*='/careers/open-positions/?department=qualityassurance']")
     private WebElement seeAllQaJobsBtn;
 
     @FindBy(xpath = "//h3[contains(text(),'Browse')]")

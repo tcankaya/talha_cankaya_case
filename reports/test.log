@@ -1,87 +1,112 @@
-12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - RUNNING TEST <---
-12:57:36 [INFO] pages.HomePage - Home Page URL: https://useinsider.com/
-12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - Home Page URL Matches Base URL: true
-12:57:36 [INFO] HomePageTest.shouldOpenHomePageUrl - PASS
-
-12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - RUNNING TEST <---
-12:57:37 [INFO] pages.HomePage - Home Page Title: #1 Leader in Individualized, Cross-Channel CX — Insider
-12:57:37 [INFO] pages.HomePage - Expected Home Page Title: Insider
-12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - Home Page Title Contains 'Insider': true
-12:57:37 [INFO] HomePageTest.shouldContainInsiderInTitle - PASS
-
-12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - RUNNING TEST <---
-12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - Home Page Logo Visible: true
-12:57:52 [INFO] HomePageTest.shouldDisplayInsiderLogo - PASS
-
-12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - RUNNING TEST <---
-12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - Hero Section on Home Page Visible: true
-12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - PASS
-
-12:58:07 [INFO] HomePageTest.shouldDisplayHeroSection - Browser closed.
-12:58:14 [INFO] CareersPageTest.shouldOpenCareersPage - RUNNING TEST <---
-12:58:15 [INFO] pages.CareersPage - Hovered and clickable: Company Menu
-12:58:19 [INFO] pages.CareersPage - Clicked on element: Company > Careers
-12:58:19 [INFO] CareersPageTest.shouldOpenCareersPage - PASS
-
-12:58:34 [INFO] CareersPageTest.isCareersPageOpened - RUNNING TEST <---
-12:58:34 [INFO] CareersPageTest.isCareersPageOpened - Careers Page Head Visible: true
-12:58:34 [INFO] CareersPageTest.isCareersPageOpened - PASS
-
-12:58:49 [INFO] CareersPageTest.shouldDisplayTeams - RUNNING TEST <---
-12:58:50 [INFO] pages.CareersPage - Scrolled and visible: Teams Section
-12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Teams Section Visible: true
-12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Visible: true
-12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Count: 3
-12:58:50 [INFO] pages.CareersPage - Scrolled and visible: See All Teams Button
-12:58:50 [INFO] CareersPageTest.shouldDisplayTeams - See All Teams Button Visible: true
-12:58:50 [INFO] pages.CareersPage - Clicked on element: See All Teams Button
-12:58:51 [INFO] CareersPageTest.shouldDisplayTeams - All Teams Count After Click: 15
-12:58:51 [INFO] CareersPageTest.shouldDisplayTeams - PASS
-
-12:59:06 [INFO] CareersPageTest.shouldValidateLocations - RUNNING TEST <---
-12:59:06 [INFO] CareersPageTest.shouldValidateLocations - Locations count: 25
-12:59:06 [INFO] CareersPageTest.shouldValidateLocations - Active city before: New York
-12:59:07 [INFO] pages.CareersPage - Scrolled and visible: Next Arrow Button
-12:59:07 [INFO] pages.CareersPage - Clicked on element: Next Arrow Button
-12:59:08 [INFO] CareersPageTest.shouldValidateLocations - Active city after: Sao Paulo
-12:59:08 [INFO] CareersPageTest.shouldValidateLocations - PASS
-
-12:59:23 [INFO] CareersPageTest.shouldValidateLifeAtInsider - RUNNING TEST <---
-12:59:23 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Section
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider section visible: true
-12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Title
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider title visible: true
-12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Description
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider description visible: true
-12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper Size
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider slides count: 13
-12:59:24 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider active slide exists: true
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - PASS
-
-12:59:24 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Browser closed.
-12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - RUNNING TEST <---
-12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Opening QA Page: https://useinsider.com/careers/quality-assurance/
-12:59:27 [INFO] QualityAssurancePageTest.shouldValidateQaPage - QA page head is visible.
-12:59:27 [INFO] pages.QualityAssurancePage - Scrolled and visible: See All QA Jobs Button
-12:59:31 [INFO] pages.QualityAssurancePage - Clicked on element: See All QA Jobs Button
-12:59:31 [INFO] QualityAssurancePageTest.shouldValidateQaPage - 'See all QA jobs' clicked.
-12:59:31 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtering by department: Quality Assurance
-12:59:31 [INFO] pages.QualityAssurancePage - Scrolled and visible: Browse Text
-12:59:33 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter
-12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Browse Text
-12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter
-12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter Option: Quality Assurance
-12:59:49 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtering by location: Istanbul, Turkiye
-12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Location Filter
-12:59:49 [INFO] pages.QualityAssurancePage - Clicked on element: Location Filter Option: Istanbul, Turkiye
-12:59:49 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Waiting filtered job list to stabilize for: Quality Assurance / Istanbul, Turkiye
-12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Validating filtered job list for: Quality Assurance / Istanbul, Turkiye
-12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtered job list validated successfully.
-12:59:50 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Expected View Role href: https://jobs.lever.co/useinsider/774658ce-0d6e-4b07-a69b-4629fa11d6f3
-12:59:51 [INFO] pages.QualityAssurancePage - Scrolled and visible: View Role Button
-12:59:51 [INFO] pages.QualityAssurancePage - Clicked on element: View Role Button
-12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Opened View Role URL: https://jobs.lever.co/useinsider/774658ce-0d6e-4b07-a69b-4629fa11d6f3
-12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - PASS
-
-12:59:55 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Browser closed.
+13:18:36 [INFO] QualityAssurancePageTest.shouldValidateQaPage - RUNNING TEST <---
+13:18:36 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Opening QA Page: https://useinsider.com/careers/quality-assurance/
+13:18:36 [INFO] QualityAssurancePageTest.shouldValidateQaPage - QA page head is visible.
+13:18:36 [INFO] pages.QualityAssurancePage - Scrolled and visible: See All QA Jobs Button
+13:18:39 [INFO] pages.QualityAssurancePage - Clicked on element: See All QA Jobs Button
+13:18:39 [INFO] QualityAssurancePageTest.shouldValidateQaPage - 'See all QA jobs' clicked.
+13:18:39 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Filtering by department: Quality Assurance
+13:18:39 [INFO] pages.QualityAssurancePage - Scrolled and visible: Browse Text
+13:18:42 [INFO] pages.QualityAssurancePage - Clicked on element: Department Filter
+13:18:43 [ERROR] QualityAssurancePageTest.shouldValidateQaPage - TEST FAILED: shouldValidateQaPage
+org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.184)
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.7.1', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e00b95cb6b4ac324add8d6a319bafb96, findElement {using=xpath, value=//li[contains(@class,'select2-results__option') and normalize-space(.)='Quality Assurance']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/r4/0lxdh46n5sg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53285}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53285/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e00b95cb6b4ac324add8d6a319bafb96
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194) ~[selenium-support-4.26.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190) ~[selenium-support-4.26.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.26.0.jar:?]
+	at utils.WaitUtils.waitForVisibility(WaitUtils.java:30) ~[classes/:?]
+	at pages.QualityAssurancePage.selectFromFilter(QualityAssurancePage.java:83) ~[classes/:?]
+	at pages.QualityAssurancePage.selectDepartment(QualityAssurancePage.java:109) ~[classes/:?]
+	at tests.QualityAssurancePageTest.shouldValidateQaPage(QualityAssurancePageTest.java:44) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+13:18:43 [ERROR] QualityAssurancePageTest.shouldValidateQaPage - Screenshot capture/save failed for test: shouldValidateQaPage
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.7.1', java.version: '24.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e00b95cb6b4ac324add8d6a319bafb96, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/r4/0lxdh46n5sg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53285}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53285/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e00b95cb6b4ac324add8d6a319bafb96
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622) ~[selenium-remote-driver-4.26.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334) ~[selenium-remote-driver-4.26.0.jar:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:53) [classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:285) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:774) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+13:18:43 [INFO] QualityAssurancePageTest.shouldValidateQaPage - Browser closed.
