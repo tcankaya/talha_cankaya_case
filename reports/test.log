@@ -1,20 +1,42 @@
-03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - RUNNING TEST <---
-03:31:35 [INFO] pages.HomePage - Home Page Title: #1 Leader in Individualized, Cross-Channel CX — Insider
-03:31:35 [INFO] pages.HomePage - Expected Home Page Title: Insider
-03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - Home Page Title Contains 'Insider': true
-03:31:35 [INFO] HomePageTest.shouldContainInsiderInTitle - PASS
+03:45:30 [INFO] CareersPageTest.shouldOpenCareersPage - RUNNING TEST <---
+03:45:30 [INFO] pages.CareersPage - Hovered and clickable: Company Menu
+03:45:35 [INFO] pages.CareersPage - Clicked on element: Company > Careers
+03:45:35 [INFO] CareersPageTest.shouldOpenCareersPage - PASS
 
-03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - RUNNING TEST <---
-03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - Hero Section on Home Page Visible: true
-03:31:35 [INFO] HomePageTest.shouldDisplayHeroSection - PASS
+03:45:36 [INFO] CareersPageTest.isCareersPageOpened - RUNNING TEST <---
+03:45:36 [INFO] CareersPageTest.isCareersPageOpened - Careers Page Head Visible: true
+03:45:36 [INFO] CareersPageTest.isCareersPageOpened - PASS
 
-03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - RUNNING TEST <---
-03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - Home Page Logo Visible: true
-03:31:35 [INFO] HomePageTest.shouldDisplayInsiderLogo - PASS
+03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - RUNNING TEST <---
+03:45:36 [INFO] pages.CareersPage - Scrolled and visible: Teams Section
+03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Teams Section Visible: true
+03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Visible: true
+03:45:36 [INFO] CareersPageTest.shouldDisplayTeams - Default Teams Count: 3
+03:45:37 [INFO] pages.CareersPage - Scrolled and visible: See All Teams Button
+03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - See All Teams Button Visible: true
+03:45:37 [INFO] pages.CareersPage - Clicked on element: See All Teams Button
+03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - All Teams Count After Click: 15
+03:45:37 [INFO] CareersPageTest.shouldDisplayTeams - PASS
 
-03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - RUNNING TEST <---
-03:31:35 [INFO] pages.HomePage - Home Page URL: https://useinsider.com/
-03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - Home Page URL Matches Base URL: true
-03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - PASS
+03:45:37 [INFO] CareersPageTest.shouldValidateLocations - RUNNING TEST <---
+03:45:37 [INFO] CareersPageTest.shouldValidateLocations - Locations count: 25
+03:45:37 [INFO] CareersPageTest.shouldValidateLocations - Active city before: New York
+03:45:38 [INFO] pages.CareersPage - Scrolled and visible: Next Arrow Button
+03:45:38 [INFO] pages.CareersPage - Clicked on element: Next Arrow Button
+03:45:39 [INFO] CareersPageTest.shouldValidateLocations - Active city after: Sao Paulo
+03:45:39 [INFO] CareersPageTest.shouldValidateLocations - PASS
 
-03:31:35 [INFO] HomePageTest.shouldOpenHomePageUrl - Browser closed.
+03:45:39 [INFO] CareersPageTest.shouldValidateLifeAtInsider - RUNNING TEST <---
+03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Section
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider section visible: true
+03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Title
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider title visible: true
+03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Description
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider description visible: true
+03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper Size
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider slides count: 13
+03:45:40 [INFO] pages.CareersPage - Scrolled and visible: Life at Insider Swiper
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Life at Insider active slide exists: true
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - PASS
+
+03:45:40 [INFO] CareersPageTest.shouldValidateLifeAtInsider - Browser closed.

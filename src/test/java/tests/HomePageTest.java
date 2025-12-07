@@ -6,19 +6,23 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.HomePage;
+import utils.ElementUtils;
 
 public class HomePageTest extends BaseTest {
 
     private HomePage homePage;
+    private ElementUtils utils;
     String expectedTitle = ConfigReader.getProperty("expectedHomePageTitle");
 
 
     @BeforeMethod
     public void initPage() {
         homePage = new HomePage(driver);
+        utils = new ElementUtils(driver);
+        utils.acceptCookiesIfVisible();
     }
 
-    @Test
+    @Test(priority = 1)
     public void shouldOpenHomePageUrl()
     {
         boolean urlMatches = homePage.HomePageURL();
@@ -26,7 +30,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(urlMatches, "Home Page URL doesn't match.");
     }
 
-    @Test
+    @Test(priority = 2)
     public void shouldContainInsiderInTitle()
     {
         boolean titleContainsInsider = homePage.HomePageTitle();
@@ -34,7 +38,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(titleContainsInsider, "Home Page title doesn't contain 'Insider'");
     }
 
-    @Test
+    @Test(priority = 3)
     public void shouldDisplayInsiderLogo()
     {
         boolean homePageLogoVisible = homePage.isHomePageLogoVisible();
@@ -42,7 +46,7 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(homePageLogoVisible, "Home Page Logo isn't Visible.");
     }
 
-    @Test
+    @Test(priority = 4)
     public void shouldDisplayHeroSection()
     {
         boolean heroSectionVisible = homePage.isHeroVisible();

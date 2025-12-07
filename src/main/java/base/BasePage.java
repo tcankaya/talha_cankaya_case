@@ -1,13 +1,17 @@
 package base;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import config.ConfigReader;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import utils.LoggerUtils;
+
+import java.time.Duration;
+
+import static utils.WaitUtils.*;
 
 public class BasePage {
     protected WebDriver driver;
@@ -33,6 +37,51 @@ public class BasePage {
 
     public String getPageTitle() {
         return driver.getTitle();
+    }
+
+    protected int getCount(By locator) {
+        return driver.findElements(locator).size();
+    }
+
+    protected void moveToElementAndWaitVisible(WebElement element, String name) {
+        new Actions(driver).moveToElement(element).perform();
+        waitForVisibility(driver, element);
+        log.info("Hovered and visible: " + name);
+    }
+
+    protected void moveToElementAndWaitClickable(WebElement element, String name) {
+        new Actions(driver).moveToElement(element).perform();
+        waitForVisibility(driver, element);
+        waitForClickability(driver, element);
+        log.info("Hovered and clickable: " + name);
+    }
+
+    protected void scrollToElementAndWaitVisible(WebElement element, String name) {
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block:'center', inline:'nearest'});", element
+        );
+
+        // Soft viewport check (no hard fail)
+        try {
+            waitForInViewport(driver, element, 3);
+        } catch (Exception ignored) {
+            // We don't care. Visibility is what matters for this framework.
+        }
+
+        waitForVisibility(driver, element);
+
+        log.info("Scrolled and visible: " + name);
+    }
+
+    protected void waitForDocumentReadyState() {
+        WebDriverWait wait = new WebDriverWait(
+                driver,
+                Duration.ofSeconds(ConfigReader.getIntProperty("pageLoadWait"))
+        );
+
+        wait.until(d -> "complete".equals(
+                ((JavascriptExecutor) d).executeScript("return document.readyState")
+        ));
     }
 }
 

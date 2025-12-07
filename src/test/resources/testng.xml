@@ -8,6 +8,7 @@
     <test name="InsiderSiteTests">
         <classes>
             <class name="tests.HomePageTest"/>
+            <class name="tests.CareersPageTest"/>
         </classes>
     </test>
 </suite>

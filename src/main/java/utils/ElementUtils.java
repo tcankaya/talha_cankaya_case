@@ -1,8 +1,12 @@
 package utils;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import static utils.WaitUtils.waitForVisibility;
+
 
 public class ElementUtils {
 
@@ -11,23 +15,25 @@ public class ElementUtils {
     public ElementUtils(WebDriver driver)
     {
         this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
-    public void click(WebElement element)
-    {
-        element = WaitUtils.waitForClickability(driver, element, 10);
-        element.click();
+    @FindBy(id = "wt-cli-accept-all-btn")
+    private WebElement acceptAllCookiesBtn;
+
+    public void acceptCookiesIfVisible() {
+        if (acceptAllCookiesBtn.isDisplayed())
+        {
+            acceptAllCookiesBtn.click();
+        }
     }
 
-    public void type(WebElement element, String text)
-    {
-        WebElement input = WaitUtils.waitForVisibility(driver, element, 10);
-        input.sendKeys(text);
+    public static void moveToElement(WebDriver driver, WebElement element, int timeoutSeconds) {
+        waitForVisibility(driver, element, timeoutSeconds);
+
+        new Actions(driver)
+                .moveToElement(element)
+                .perform();
     }
 
-    public String getText(WebElement element)
-    {
-        element = WaitUtils.waitForVisibility(driver, element, 10);
-        return element.getText();
-    }
 }

@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ConfigReader {
+
     private static Properties props;
     static
     {
@@ -21,5 +22,10 @@ public class ConfigReader {
 
     public static String getProperty(String key) {
         return props.getProperty(key);
+    }
+
+    public static int getIntProperty(String key)
+    {
+        return Integer.parseInt(getProperty(key));
     }
 }
