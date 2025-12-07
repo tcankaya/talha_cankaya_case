@@ -7,7 +7,7 @@ import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import static utils.WaitUtils.waitForVisibility;
+import static utils.WaitUtils.waitVisible;
 
 public class HomePage extends BasePage {
 
@@ -47,7 +47,7 @@ public class HomePage extends BasePage {
     {
         try
         {
-            waitForVisibility(driver, insiderLogo, 5);
+            waitVisible(driver, insiderLogo, 5);
             return true;
         }
         catch (TimeoutException e)
@@ -58,6 +58,6 @@ public class HomePage extends BasePage {
 
     public boolean isHeroVisible()
     {
-        return waitForVisibility(driver, heroSection).isDisplayed();
+        return waitVisible(driver, heroSection).isDisplayed();
     }
 }

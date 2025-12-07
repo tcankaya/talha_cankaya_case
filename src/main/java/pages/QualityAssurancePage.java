@@ -50,7 +50,7 @@ public class QualityAssurancePage extends BasePage {
     public boolean isPageHeadVisible()
     {
         waitForDocumentReadyState();
-        waitForVisibility(driver, qaPageHead);
+        waitVisible(driver, qaPageHead);
         return qaPageHead.isDisplayed();
     }
 
@@ -62,7 +62,7 @@ public class QualityAssurancePage extends BasePage {
 
     private void selectFromFilter(WebElement filterContainer, String filterName, String value)
     {
-        waitForAnyVisible(driver, jobItems);
+        waitAnyVisible(driver, jobItems);
 
         By optionLocator = By.xpath("//li[contains(@class,'select2-results__option') and normalize-space(.)='" + value + "']");
 
@@ -72,12 +72,12 @@ public class QualityAssurancePage extends BasePage {
         {
             try
             {
-                waitForClickability(driver, filterContainer);
+                waitClickable(driver, filterContainer);
                 click(filterContainer, filterName);
 
-                waitForVisibility(driver, filterOptions);
-                waitForAnyVisible(driver, By.cssSelector("li.select2-results__option"));
-                waitForVisibility(driver, optionLocator);
+                waitVisible(driver, filterOptions);
+                waitAnyVisible(driver, By.cssSelector("li.select2-results__option"));
+                waitVisible(driver, optionLocator);
 
                 WebElement option = driver.findElement(optionLocator);
                 click(option, filterName + " Option: " + value);
@@ -145,7 +145,7 @@ public class QualityAssurancePage extends BasePage {
 
     public void validateFilteredJobsVisible(String expectedDepartment, String expectedLocation)
     {
-        waitForAnyVisible(driver, jobItems);
+        waitAnyVisible(driver, jobItems);
 
         for (WebElement job : driver.findElements(jobItems))
         {
@@ -164,7 +164,7 @@ public class QualityAssurancePage extends BasePage {
     public String getFirstViewRoleHref()
     {
         By jobItem = By.cssSelector(".position-list-item");
-        waitForAnyVisible(driver, jobItem);
+        waitAnyVisible(driver, jobItem);
 
         WebElement firstJob = driver.findElements(jobItem).get(0);
 
@@ -179,7 +179,7 @@ public class QualityAssurancePage extends BasePage {
     public String openFirstViewRoleAndGetOpenedUrl()
     {
         By jobItem = By.cssSelector(".position-list-item");
-        waitForAnyVisible(driver, jobItem);
+        waitAnyVisible(driver, jobItem);
 
         WebElement firstJob = driver.findElements(jobItem).get(0);
 

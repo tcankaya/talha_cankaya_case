@@ -43,14 +43,14 @@ public class BasePage {
 
     protected void moveToElementAndWaitVisible(WebElement element, String name) {
         new Actions(driver).moveToElement(element).perform();
-        waitForVisibility(driver, element);
+        waitVisible(driver, element);
         log.info("Hovered and visible: " + name);
     }
 
     protected void moveToElementAndWaitClickable(WebElement element, String name) {
         new Actions(driver).moveToElement(element).perform();
-        waitForVisibility(driver, element);
-        waitForClickability(driver, element);
+        waitVisible(driver, element);
+        waitClickable(driver, element);
         log.info("Hovered and clickable: " + name);
     }
 
@@ -60,10 +60,10 @@ public class BasePage {
         );
 
         try {
-            waitForInViewport(driver, element, 3);
+            waitInViewport(driver, element, 3);
         } catch (Exception ignored) {}
 
-        waitForVisibility(driver, element);
+        waitVisible(driver, element);
 
         log.info("Scrolled and visible: " + name);
     }

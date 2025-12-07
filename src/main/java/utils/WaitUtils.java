@@ -5,70 +5,93 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.List;
 
-public class WaitUtils {
+public final class WaitUtils {
 
-    private static int getDefaultWait()
-    {
+    private WaitUtils() {}
+
+    private static int defaultWaitSeconds() {
         return ConfigReader.getIntProperty("explicitWait");
     }
 
-    // Method Overload - Visibility (WebElement)
-    public static WebElement waitForVisibility(WebDriver driver, WebElement element)
-    {
-        return waitForVisibility(driver, element, getDefaultWait());
+    private static WebDriverWait wait(WebDriver driver) {
+        return wait(driver, defaultWaitSeconds());
     }
 
-    public static WebElement waitForVisibility(WebDriver driver, WebElement element, int timeoutSeconds)
+    private static WebDriverWait wait(WebDriver driver, int timeoutSeconds)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-        return wait.until(ExpectedConditions.visibilityOf(element));
+        return new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
     }
 
-    public static void waitForVisibility(WebDriver driver, By locator)
+    // -------------------- Visibility --------------------
+
+    public static WebElement waitVisible(WebDriver driver, WebElement element)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(getDefaultWait()));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return wait(driver).until(ExpectedConditions.visibilityOf(element));
     }
 
-    // Method Overload - Clickability
-    public static WebElement waitForClickability(WebDriver driver, WebElement element)
+    public static WebElement waitVisible(WebDriver driver, WebElement element, int timeoutSeconds)
     {
-        return waitForClickability(driver, element, getDefaultWait());
+        return wait(driver, timeoutSeconds).until(ExpectedConditions.visibilityOf(element));
     }
 
-    public static WebElement waitForClickability(WebDriver driver, WebElement element, int timeoutSeconds)
+    public static WebElement waitVisible(WebDriver driver, By locator)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
+        return wait(driver).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static List<WebElement> waitForAllVisible(WebDriver driver, By locator)
+    public static WebElement waitVisible(WebDriver driver, By locator, int timeoutSeconds)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(getDefaultWait()));
-        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+        return wait(driver, timeoutSeconds).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void waitForAnyVisible(WebDriver driver, By locator)
+    public static List<WebElement> waitAllVisible(WebDriver driver, By locator)
     {
-        int waitSec = Integer.parseInt(ConfigReader.getProperty("pageLoadWait"));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitSec));
-
-        wait.until(d -> d.findElements(locator).stream().anyMatch(WebElement::isDisplayed));
+        return wait(driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 
-    public static void waitForCountMoreThan(WebDriver driver, By locator, int oldCount)
+    // -------------------- Clickability --------------------
+
+    public static WebElement waitClickable(WebDriver driver, WebElement element)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(getDefaultWait()));
-        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(locator, oldCount));
+        return wait(driver).until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public static void waitForInViewport(WebDriver driver, WebElement element, int timeoutSeconds)
+    public static WebElement waitClickable(WebDriver driver, WebElement element, int timeoutSeconds)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-        wait.until(d -> (Boolean) ((JavascriptExecutor) d).executeScript(
+        return wait(driver, timeoutSeconds).until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static WebElement waitClickable(WebDriver driver, By locator)
+    {
+        return wait(driver).until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    // -------------------- Collection / Count --------------------
+
+    public static void waitAnyVisible(WebDriver driver, By locator)
+    {
+        wait(driver).until(d -> d.findElements(locator).stream().anyMatch(WebElement::isDisplayed));
+    }
+
+    public static void waitCountMoreThan(WebDriver driver, By locator, int oldCount)
+    {
+        wait(driver).until(ExpectedConditions.numberOfElementsToBeMoreThan(locator, oldCount));
+    }
+
+    // -------------------- Viewport --------------------
+
+    public static void waitInViewport(WebDriver driver, WebElement element)
+    {
+        waitInViewport(driver, element, defaultWaitSeconds());
+    }
+
+    public static void waitInViewport(WebDriver driver, WebElement element, int timeoutSeconds)
+    {
+        wait(driver, timeoutSeconds).until(d -> (Boolean) ((JavascriptExecutor) d).executeScript(
                 "const r = arguments[0].getBoundingClientRect();" +
                         "return (r.bottom > 0 && r.right > 0 && " +
                         "r.top < (window.innerHeight || document.documentElement.clientHeight) && " +
@@ -77,7 +100,9 @@ public class WaitUtils {
         ));
     }
 
-    protected void pressEscape(WebDriver driver)
+    // -------------------- Simple UI actions --------------------
+
+    public static void pressEscape(WebDriver driver)
     {
         new Actions(driver).sendKeys(Keys.ESCAPE).perform();
     }

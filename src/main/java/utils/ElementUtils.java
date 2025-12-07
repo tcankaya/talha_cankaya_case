@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import static utils.WaitUtils.waitForVisibility;
+import static utils.WaitUtils.waitVisible;
 
 
 public class ElementUtils {
@@ -26,7 +26,7 @@ public class ElementUtils {
     {
         try
         {
-            waitForVisibility(driver,acceptAllCookiesBtn);
+            waitVisible(driver,acceptAllCookiesBtn);
             acceptAllCookiesBtn.click();
         }
         catch (TimeoutException | NoSuchElementException ignored) {}

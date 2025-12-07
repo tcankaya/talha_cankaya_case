@@ -84,17 +84,17 @@ public class CareersPage extends BasePage {
 
     // Actions for Careers Page
     public void openCareersFromCompanyMenu() {
-        waitForVisibility(driver, companyMenu);
+        waitVisible(driver, companyMenu);
         moveToElementAndWaitClickable(companyMenu, "Company Menu");
 
-        waitForVisibility(driver, careersMenuItem);
-        waitForClickability(driver, careersMenuItem);
+        waitVisible(driver, careersMenuItem);
+        waitClickable(driver, careersMenuItem);
         click(careersMenuItem, "Company > Careers");
     }
 
     public boolean isPageHeadVisible() {
         waitForDocumentReadyState();
-        waitForVisibility(driver, careersPageHead);
+        waitVisible(driver, careersPageHead);
         return careersPageHead.isDisplayed();
     }
 
@@ -111,7 +111,7 @@ public class CareersPage extends BasePage {
     }
 
     public boolean areTeamItemsVisible() {
-        waitForAllVisible(driver, teamItems);
+        waitAllVisible(driver, teamItems);
         return !driver.findElements(teamItems).isEmpty();
     }
 
@@ -124,30 +124,30 @@ public class CareersPage extends BasePage {
         int oldCount = getTeamItemsCount();
         click(seeAllTeamsBtn, "See All Teams Button");
 
-        waitForCountMoreThan(driver, teamItems, oldCount);
+        waitCountMoreThan(driver, teamItems, oldCount);
     }
 
     // Actions for Locations Section
 
     public boolean isLocationsBlockVisible() {
         waitForDocumentReadyState();
-        waitForVisibility(driver, locationsBlock);
+        waitVisible(driver, locationsBlock);
         return locationsBlock.isDisplayed();
     }
 
     public int getLocationsCount() {
-        waitForVisibility(driver, locationSlides.get(0));
+        waitVisible(driver, locationSlides.get(0));
         return locationSlides.size();
     }
 
     public String getActiveCity() {
-        waitForVisibility(driver, activeCityName);
+        waitVisible(driver, activeCityName);
         return activeCityName.getText().trim();
     }
 
     public void clickNextLocation() {
         scrollToElementAndWaitVisible(locationsNextArrow, "Next Arrow Button");
-        waitForClickability(driver, locationsNextArrow);
+        waitClickable(driver, locationsNextArrow);
         click(locationsNextArrow,"Next Arrow Button");
     }
 
@@ -183,7 +183,7 @@ public class CareersPage extends BasePage {
 
     public boolean hasActiveLifeSlide() {
         scrollToElementAndWaitVisible(lifeSwiperContainer, "Life at Insider Swiper");
-        waitForVisibility(driver, lifeActiveSlideImage);
+        waitVisible(driver, lifeActiveSlideImage);
         return lifeActiveSlideImage.isDisplayed();
     }
 
