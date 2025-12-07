@@ -16,7 +16,8 @@ public class HomePageTest extends BaseTest {
 
 
     @BeforeClass
-    public void initPage() {
+    public void initPage()
+    {
         homePage = new HomePage(driver);
         utils = new ElementUtils(driver);
         utils.acceptCookiesIfVisible();

@@ -14,7 +14,8 @@ public class QualityAssurancePageTest extends BaseTest {
     private ElementUtils utils;
 
     @Override
-    protected String startURL() {
+    protected String startURL()
+    {
         return ConfigReader.getProperty("qaPageUrl");
     }
 
@@ -27,8 +28,8 @@ public class QualityAssurancePageTest extends BaseTest {
     }
 
     @Test
-    public void shouldValidateQaPage() {
-
+    public void shouldValidateQaPage()
+    {
         log.info("Opening QA Page: " + ConfigReader.getProperty("qaPageUrl"));
 
         Assert.assertTrue(qaPage.isPageHeadVisible(), "QA Page Head isn't visible.");

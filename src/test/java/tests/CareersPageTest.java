@@ -13,7 +13,8 @@ public class CareersPageTest extends BaseTest {
     private ElementUtils utils;
 
     @BeforeClass
-    public void initPage() {
+    public void initPage()
+    {
         careersPage = new CareersPage(driver);
         utils = new ElementUtils(driver);
         utils.acceptCookiesIfVisible();
@@ -59,8 +60,8 @@ public class CareersPageTest extends BaseTest {
     }
 
     @Test(priority = 4)
-    public void shouldValidateLocations() {
-
+    public void shouldValidateLocations()
+    {
         Assert.assertTrue(careersPage.isLocationsBlockVisible(), "Locations block isn't visible.");
 
         int count = careersPage.getLocationsCount();
@@ -80,8 +81,8 @@ public class CareersPageTest extends BaseTest {
     }
 
     @Test(priority = 5)
-    public void shouldValidateLifeAtInsider() {
-
+    public void shouldValidateLifeAtInsider()
+    {
         boolean sectionVisible = careersPage.isLifeAtInsiderSectionVisible();
         log.info("Life at Insider section visible: " + sectionVisible);
         Assert.assertTrue(sectionVisible);

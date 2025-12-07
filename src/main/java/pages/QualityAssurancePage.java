@@ -8,17 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
-import java.util.Set;
-
-import static utils.ElementUtils.moveToElement;
 import static utils.WaitUtils.*;
 
-public class QualityAssurancePage extends BasePage
-{
-    public QualityAssurancePage(WebDriver driver) {
+public class QualityAssurancePage extends BasePage {
+
+    public QualityAssurancePage(WebDriver driver)
+    {
         super(driver);
         PageFactory.initElements(driver, this);
     }
@@ -63,8 +60,8 @@ public class QualityAssurancePage extends BasePage
         click(seeAllQaJobsBtn, "See All QA Jobs Button");
     }
 
-    private void selectFromFilter(WebElement filterContainer, String filterName, String value) {
-
+    private void selectFromFilter(WebElement filterContainer, String filterName, String value)
+    {
         waitForAnyVisible(driver, jobItems);
 
         By optionLocator = By.xpath("//li[contains(@class,'select2-results__option') and normalize-space(.)='" + value + "']");
@@ -104,17 +101,19 @@ public class QualityAssurancePage extends BasePage
         }
     }
 
-    public void selectDepartment(String department) {
+    public void selectDepartment(String department)
+    {
         scrollToElementAndWaitVisible(browseText, "Browse Text");
         selectFromFilter(departmentSelect2Container, "Department Filter", department);
     }
 
-    public void selectLocation(String location) {
+    public void selectLocation(String location)
+    {
         selectFromFilter(locationSelect2Container, "Location Filter", location);
     }
 
-    public void waitForFilteredJobs(String expectedDepartment, String expectedLocation) {
-
+    public void waitForFilteredJobs(String expectedDepartment, String expectedLocation)
+    {
         int waitSec = Integer.parseInt(ConfigReader.getProperty("pageLoadWait"));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitSec));
 
@@ -125,16 +124,18 @@ public class QualityAssurancePage extends BasePage
             List<WebElement> jobs = d.findElements(jobItems);
             if (jobs.isEmpty()) return false;
 
-            for (WebElement job : jobs) {
-                try {
+            for (WebElement job : jobs)
+            {
+                try
+                {
                     String deptText = job.findElement(deptBy).getText().trim();
                     String locText  = job.findElement(locBy).getText().trim();
 
                     if (!expectedDepartment.equals(deptText)) return false;
                     if (!expectedLocation.equals(locText)) return false;
 
-                } catch (org.openqa.selenium.StaleElementReferenceException |
-                         org.openqa.selenium.NoSuchElementException ex) {
+                } catch (org.openqa.selenium.StaleElementReferenceException | org.openqa.selenium.NoSuchElementException ex)
+                {
                     return false;
                 }
             }
@@ -142,12 +143,12 @@ public class QualityAssurancePage extends BasePage
         });
     }
 
-    public void validateFilteredJobsVisible(String expectedDepartment, String expectedLocation) {
-
+    public void validateFilteredJobsVisible(String expectedDepartment, String expectedLocation)
+    {
         waitForAnyVisible(driver, jobItems);
 
-        for (WebElement job : driver.findElements(jobItems)) {
-
+        for (WebElement job : driver.findElements(jobItems))
+        {
             String deptText = job.findElement(By.cssSelector(".position-department")).getText().trim();
             String locText  = job.findElement(By.cssSelector(".position-location")).getText().trim();
 
@@ -160,8 +161,8 @@ public class QualityAssurancePage extends BasePage
         }
     }
 
-    public String getFirstViewRoleHref() {
-
+    public String getFirstViewRoleHref()
+    {
         By jobItem = By.cssSelector(".position-list-item");
         waitForAnyVisible(driver, jobItem);
 
@@ -175,8 +176,8 @@ public class QualityAssurancePage extends BasePage
         return viewRole.getAttribute("href");
     }
 
-    public String openFirstViewRoleAndGetOpenedUrl() {
-
+    public String openFirstViewRoleAndGetOpenedUrl()
+    {
         By jobItem = By.cssSelector(".position-list-item");
         waitForAnyVisible(driver, jobItem);
 
@@ -199,21 +200,22 @@ public class QualityAssurancePage extends BasePage
         java.util.Set<String> after = driver.getWindowHandles();
         String newWindow = null;
 
-        for (String handle : after) {
-            if (!before.contains(handle)) {
+        for (String handle : after)
+        {
+            if (!before.contains(handle))
+            {
                 newWindow = handle;
                 break;
             }
         }
 
-        if (newWindow == null) {
-            // If site sometimes opens same tab, fallback to current URL
+        if (newWindow == null)
+        {
             return driver.getCurrentUrl();
         }
 
         driver.switchTo().window(newWindow);
 
-        // Optional: ensure the new page is ready-ish
         waitForDocumentReadyState();
 
         return driver.getCurrentUrl();

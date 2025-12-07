@@ -4,7 +4,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import static utils.WaitUtils.waitForVisibility;
@@ -23,22 +22,13 @@ public class ElementUtils {
     @FindBy(id = "wt-cli-accept-all-btn")
     private WebElement acceptAllCookiesBtn;
 
-    public void acceptCookiesIfVisible() {
+    public void acceptCookiesIfVisible()
+    {
         try
         {
             waitForVisibility(driver,acceptAllCookiesBtn);
             acceptAllCookiesBtn.click();
         }
         catch (TimeoutException | NoSuchElementException ignored) {}
-
     }
-
-    public static void moveToElement(WebDriver driver, WebElement element, int timeoutSeconds) {
-        waitForVisibility(driver, element, timeoutSeconds);
-
-        new Actions(driver)
-                .moveToElement(element)
-                .perform();
-    }
-
 }

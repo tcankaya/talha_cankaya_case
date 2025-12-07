@@ -68,7 +68,9 @@ public class TestListener implements ITestListener {
     }
 
     @Override public void onTestSkipped(ITestResult result) {}
-    @Override public void onFinish(ITestContext context) {
+
+    @Override public void onFinish(ITestContext context)
+    {
         System.out.println("\nLOG DETAILS: reports/test.log" );
         System.out.println("FAILURE SCREENSHOTS: reports/screenshots");
     }
