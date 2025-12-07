@@ -2,7 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.CareersPage;
 import utils.ElementUtils;
@@ -12,7 +12,7 @@ public class CareersPageTest extends BaseTest {
     private CareersPage careersPage;
     private ElementUtils utils;
 
-    @BeforeMethod
+    @BeforeClass
     public void initPage() {
         careersPage = new CareersPage(driver);
         utils = new ElementUtils(driver);

@@ -2,7 +2,7 @@ package tests;
 
 import config.ConfigReader;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.HomePage;
@@ -15,7 +15,7 @@ public class HomePageTest extends BaseTest {
     String expectedTitle = ConfigReader.getProperty("expectedHomePageTitle");
 
 
-    @BeforeMethod
+    @BeforeClass
     public void initPage() {
         homePage = new HomePage(driver);
         utils = new ElementUtils(driver);

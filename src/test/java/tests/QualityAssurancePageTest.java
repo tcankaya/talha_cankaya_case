@@ -3,7 +3,7 @@ package tests;
 import base.BaseTest;
 import config.ConfigReader;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.QualityAssurancePage;
 import utils.ElementUtils;
@@ -18,7 +18,7 @@ public class QualityAssurancePageTest extends BaseTest {
         return ConfigReader.getProperty("qaPageUrl");
     }
 
-    @BeforeMethod
+    @BeforeClass
     public void initPage()
     {
         qaPage = new QualityAssurancePage(driver);
